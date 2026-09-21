@@ -1,9 +1,10 @@
 {
-  "short_name": "Ruta Segura",
-  "name": "Ruta Segura Tunja",
-  "description": "PWA para consultar lugares de interés en Tunja, incluso sin conexión.",
+  "short_name": "RutaSeguraTunja",
+  "name": "Ruta Segura Tunja - Lugares de Interés",
+  "description": "PWA para consultar lugares de interés en Tunja, Boyacá, incluso sin conexión.",
   "start_url": "index.html",
   "scope": "./",
+  "id": "/RutaSeguraTunja/",
   "background_color": "#0f4c5c",
   "theme_color": "#0f4c5c",
   "display": "standalone",

@@ -1,5 +1,5 @@
-const CACHE_ESTATICO = "ruta-segura-static-v3";
-const CACHE_DINAMICO = "ruta-segura-dynamic-v3";
+const CACHE_ESTATICO = "ruta-segura-tunja-static-v1";
+const CACHE_DINAMICO = "ruta-segura-tunja-dynamic-v1";
 const LIMITE_CACHE_DINAMICO = 20;
 
 const APP_SHELL = [
