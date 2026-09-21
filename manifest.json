@@ -1,0 +1,19 @@
+{
+  "short_name": "Ruta Segura",
+  "name": "Ruta Segura Tunja",
+  "description": "PWA para consultar lugares de interés en Tunja, incluso sin conexión.",
+  "start_url": "index.html",
+  "scope": "./",
+  "background_color": "#0f4c5c",
+  "theme_color": "#0f4c5c",
+  "display": "standalone",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

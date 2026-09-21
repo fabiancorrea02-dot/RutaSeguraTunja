@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f4c5c">
+  <meta name="description" content="PWA para consultar lugares de interés en Tunja, incluso sin conexión.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ruta Segura">
+  <link rel="icon" href="./img/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/icon.svg">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Ruta Segura Tunja</title>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor cabecera-contenido">
+      <div>
+        <p class="etiqueta">Tunja, Boyacá</p>
+        <h1>Ruta Segura</h1>
+        <p class="subtitulo">Consulta lugares útiles, incluso con conectividad limitada.</p>
+      </div>
+      <span id="estado-conexion" class="estado estado--online" aria-live="polite">● En línea</span>
+      <button id="btn-instalar" class="btn-instalar" hidden>Instalar app</button>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="panel bienvenida" aria-labelledby="titulo-bienvenida">
+      <div>
+        <h2 id="titulo-bienvenida">Encuentra puntos de interés</h2>
+        <p>La interfaz y los datos esenciales están disponibles sin Internet. Las imágenes externas se guardan después de su primera consulta.</p>
+      </div>
+    </section>
+
+    <section class="controles" aria-label="Filtros de lugares">
+      <label class="campo-busqueda" for="buscador">
+        <span>Buscar lugar</span>
+        <input id="buscador" type="search" placeholder="Ej.: parque, salud, plaza" autocomplete="off">
+      </label>
+      <div id="filtros" class="filtros" aria-label="Filtrar por categoría"></div>
+    </section>
+
+    <section class="resumen" aria-live="polite">
+      <p id="contador-lugares">0 lugares encontrados</p>
+      <button id="btn-favoritos" class="enlace-boton" aria-pressed="false">Ver favoritos</button>
+    </section>
+
+    <section id="lista-lugares" class="cuadricula-lugares" aria-label="Lista de lugares"></section>
+
+    <section id="sin-resultados" class="panel vacio" hidden>
+      <h2>No hay resultados</h2>
+      <p>Prueba con otra búsqueda o cambia la categoría seleccionada.</p>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Ruta Segura Tunja · Demostración de Cache Only y Cache with Network Fallback.</p>
+    </div>
+  </footer>
+
+  <dialog id="modal-detalle" class="modal">
+    <article id="contenido-modal"></article>
+    <form method="dialog"><button class="cerrar-modal" aria-label="Cerrar detalle">×</button></form>
+  </dialog>
+
+  <script src="./js/datos.js"></script>
+  <script src="./js/ui.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
